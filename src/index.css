@@ -1,0 +1,168 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    color-scheme: light !important;
+  }
+
+  html, body, #root {
+    background-color: #FFFFFF !important;
+    background: #FFFFFF !important;
+    color: #0F172A !important;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+    line-height: 1.5;
+    overflow-x: hidden;
+  }
+
+  /* Single color-token override for secondary/muted text (#4B5461) */
+  .text-slate-500,
+  .text-slate-400,
+  \.text-\[\#5B6270\] {
+    color: #4B5461;
+  }
+
+  /* Clean Scrollbars */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: #F1F5F9;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #CBD5E1;
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: #94A3B8;
+  }
+}
+
+/* ── Genex Signature Border & Button Styling System ── */
+
+/* Default Card: Clean White Background + Neutral Gray Border (#D9D4C8) */
+.genex-card {
+  background-color: #FFFFFF;
+  border: 1px solid #D9D4C8;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+}
+
+/* Flagged / Meaningful Card: Reserved for Detected Pathogens, Resistant Antibiotics, Alert Banners & Synthesis Cards */
+.genex-card-flagged {
+  background-color: #FFFFFF;
+  border-top: 3.5px solid #D98E3F;
+  border-bottom: 3.5px solid #5C8A6B;
+  border-left: 1px solid #D9D4C8;
+  border-right: 1px solid #D9D4C8;
+  border-radius: 12px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+}
+
+/* 4px Left-Accent Bars for Result Rows */
+.genex-row-safe {
+  border-left: 4px solid #5C8A6B !important;
+}
+
+.genex-row-resistant {
+  border-left: 4px solid #D98E3F !important;
+}
+
+/* Primary Action Button: Orange-to-Green Gradient */
+.genex-btn-primary {
+  background: linear-gradient(135deg, #D98E3F 0%, #5C8A6B 100%);
+  color: #FFFFFF;
+  font-weight: 700;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(217, 142, 63, 0.28);
+  transition: all 0.2s ease-in-out;
+}
+
+.genex-btn-primary:hover {
+  filter: brightness(1.06);
+  transform: translateY(-1px);
+  box-shadow: 0 5px 14px rgba(217, 142, 63, 0.35);
+}
+
+.genex-btn-primary:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(217, 142, 63, 0.2);
+}
+
+/* Secondary Button */
+.genex-btn-secondary {
+  background-color: #F8FAFC;
+  color: #334155;
+  border: 1px solid #D9D4C8;
+  font-weight: 600;
+  border-radius: 10px;
+  transition: all 0.15s ease;
+}
+
+.genex-btn-secondary:hover {
+  background-color: #F1F5F9;
+  border-color: #CBD5E1;
+  color: #0F172A;
+}
+
+/* Result Row 4px Left Accent Bars */
+.genex-accent-safe {
+  border-left: 4.5px solid #5C8A6B !important;
+}
+
+.genex-accent-flagged {
+  border-left: 4.5px solid #D98E3F !important;
+}
+
+/* Optical Scanner Line Animation */
+@keyframes scan-line-sweep {
+  0% {
+    top: 5%;
+    opacity: 0.3;
+  }
+  50% {
+    opacity: 0.95;
+  }
+  100% {
+    top: 92%;
+    opacity: 0.3;
+  }
+}
+
+.animate-scan-sweep {
+  position: absolute;
+  left: 4%;
+  right: 4%;
+  height: 2.5px;
+  background: linear-gradient(90deg, transparent, #D98E3F, #5C8A6B, #D98E3F, transparent);
+  box-shadow: 0 0 12px 2px rgba(217, 142, 63, 0.6);
+  animation: scan-line-sweep 2.8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+/* Modal Pop-up Entrance Animation (Scale + Fade) */
+@keyframes popup-scale-in {
+  0% {
+    opacity: 0;
+    transform: scale(0.92) translateY(8px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+.animate-popup-scale {
+  animation: popup-scale-in 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}

@@ -1,0 +1,26 @@
+{
+  "short_name": "Genex",
+  "name": "Genex — AI Point-of-Care Cartridge Reader",
+  "description": "Point-of-Care Microfluidic Cartridge Diagnostic Reader for Rapid UTI Identification & AST",
+  "icons": [
+    {
+      "src": "/icon-192.png",
+      "type": "image/png",
+      "sizes": "192x192",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/icon-512.png",
+      "type": "image/png",
+      "sizes": "512x512",
+      "purpose": "any maskable"
+    }
+  ],
+  "start_url": "/",
+  "scope": "/",
+  "background_color": "#FFFFFF",
+  "theme_color": "#D98E3F",
+  "display": "standalone",
+  "orientation": "portrait",
+  "categories": ["medical", "health", "diagnostics"]
+}
