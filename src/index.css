@@ -6,8 +6,13 @@
   }
 
   html, body, #root {
-    background-color: #FFFFFF !important;
-    background: #FFFFFF !important;
+    background-color: #F8FAF9 !important;
+    background-image:
+      radial-gradient(1200px 700px at 0% -5%, rgba(217, 142, 63, 0.08) 0%, transparent 60%),
+      radial-gradient(1300px 800px at 100% 100%, rgba(92, 138, 107, 0.09) 0%, transparent 60%),
+      radial-gradient(circle at 12px 12px, rgba(148, 163, 184, 0.22) 1.2px, transparent 1.2px) !important;
+    background-size: 100% 100%, 100% 100%, 24px 24px !important;
+    background-attachment: fixed !important;
     color: #0F172A !important;
     margin: 0;
     padding: 0;

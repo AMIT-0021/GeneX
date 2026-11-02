@@ -424,7 +424,7 @@ export const App: React.FC = () => {
   // ── Render ────────────────────────────────────────────────────────────────
 
   return (
-    <div className="min-h-screen flex flex-col font-sans relative overflow-x-hidden bg-white text-slate-900 pb-16 lg:pb-0">
+    <div className="min-h-screen flex flex-col font-sans relative overflow-x-hidden text-slate-900 pb-16 lg:pb-0">
       {/* Global Restructured 3-Tier Header */}
       <Header
         currentStage={currentStage}
