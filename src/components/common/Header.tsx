@@ -173,7 +173,7 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className="w-full bg-white border-t-[3.5px] border-t-[#D98E3F] border-b-[3.5px] border-b-[#5C8A6B] border-x border-x-[#D9D4C8] sticky top-0 z-40 px-3 sm:px-6 py-2 sm:py-2.5 shadow-xs">
+    <header className="w-full bg-white/95 backdrop-blur-md border-t-[3.5px] border-t-[#D98E3F] border-b-[3.5px] border-b-[#5C8A6B] border-x border-x-[#D9D4C8] sticky top-0 z-40 px-3 sm:px-6 py-2 sm:py-2.5 shadow-xs">
       <div className="max-w-6xl mx-auto flex items-center justify-between gap-2">
         {/* ── 1. Left: Brand & Identity (Always visible, compact on mobile) ── */}
         <button
